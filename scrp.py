@@ -76,7 +76,7 @@ def create_issue( title, body):
     url = f"https://api.github.com/repos/{repo_url.split('/')[-2]}/{repo_url.split('/')[-1].split('.')[0]}/issues"
     print(url)
     headers = {
-        "Authorization": "token {{secrets.token}}",
+        "Authorization": "token ${{secrets.token}}",
         "Accept": "application/vnd.github.v3+json"
     }
     payload = {
@@ -95,7 +95,7 @@ def view_issues(state="open"):
     print(url)
     #url = 'https://api.github.com/repos/oleend/actions/issues?state=open'
     headers = {
-            "Authorization": f"token {{secrets.token}}",
+            "Authorization": f"token ${{secrets.token}}",
             "Accept": "application/vnd.github.v3+json"
         }
     response = requests.get(url, headers=headers)
@@ -116,7 +116,7 @@ def view_issues(state="open"):
         #    print(f"Failed to fetch {state} issues.")
 
 
-
+print(${{secrets.token}})
 view_issues(state="open")
 create_issue(title="Test Issue #2", body="The body of the issue")
 
