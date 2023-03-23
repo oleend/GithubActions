@@ -76,7 +76,7 @@ def create_issue( title, body):
     url = f"https://api.github.com/repos/{repo_url.split('/')[-2]}/{repo_url.split('/')[-1].split('.')[0]}/issues"
     print(url)
     headers = {
-        "Authorization": "token ${{secrets.token}}",
+        "Authorization": "token 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",
         "Accept": "application/vnd.github.v3+json"
     }
     payload = {
@@ -95,7 +95,7 @@ def view_issues(state="open"):
     print(url)
     #url = 'https://api.github.com/repos/oleend/actions/issues?state=open'
     headers = {
-            "Authorization": f"token ${{secrets.token}}",
+            "Authorization": f"token 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",
             "Accept": "application/vnd.github.v3+json"
         }
     response = requests.get(url, headers=headers)
