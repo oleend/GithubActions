@@ -116,7 +116,7 @@ def view_issues(state="open"):
         #    print(f"Failed to fetch {state} issues.")
 
 
-print({{secrets.token}})
+
 view_issues(state="open")
 create_issue(title="Test Issue #2", body="The body of the issue")
 
