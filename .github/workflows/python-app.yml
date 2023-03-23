@@ -31,5 +31,5 @@ jobs:
    
     - name: Running Script
       run: | 
-       python scrp.py
+       python clean.py ${{secrets.REPO_URL}} --token ${{secrets.TOKEN}}
         
