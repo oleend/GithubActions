@@ -76,7 +76,7 @@ def create_issue( title, body):
     url = f"https://api.github.com/repos/{repo_url.split('/')[-2]}/{repo_url.split('/')[-1].split('.')[0]}/issues"
     print(url)
     headers = {
-        "Authorization": "token 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",
+        "Authorization": "token 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",
         "Accept": "application/vnd.github.v3+json"
     }
     payload = {
@@ -95,7 +95,7 @@ def view_issues(state="open"):
     print(url)
     #url = 'https://api.github.com/repos/oleend/actions/issues?state=open'
     headers = {
-            "Authorization": f"token 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",
+            "Authorization": f"token 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",
             "Accept": "application/vnd.github.v3+json"
         }
     response = requests.get(url, headers=headers)
@@ -112,8 +112,8 @@ def view_issues(state="open"):
             if issue['comments'] >= 1:
                 view_issue_comments(issue['comments_url'], headers)
             print(f"Issue #{issue['number']}: {issue['title']}")
-        #else:
-        #    print(f"Failed to fetch {state} issues.")
+    else:
+        print(f"Failed to fetch {state} issues.",response.json())
 
 
 
