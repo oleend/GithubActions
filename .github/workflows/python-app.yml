@@ -28,8 +28,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirement.txt
         
-   
+#Remember to use right file and use secrets that are creates
     - name: Running Script
       run: | 
-       python scrp.py
+       python clean.py ${{secrets.REPO_URL}} --token ${{secrets.TOKEN}}
         
