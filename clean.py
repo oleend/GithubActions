@@ -39,7 +39,7 @@ class GitOperation:
             self.repo.git.checkout(branchName)
         print('*'*50)
     def commitFile(self,filename):
-        print('>>>>> Creating Branch or Switching to Branch:')
+        print('>>>>> Commiting file to branch:')
         print('*'*50)
         try:
             self.repo.index.add(filename)
@@ -208,7 +208,7 @@ if __name__ == "__main__":
     #gitObject.gitLogCommits('test')
     #gitObject.gitLogCommits('development')
 
-    #--token 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
+    #--token 
 
     # Working on inputing token and automating push
     #Then Github actions
