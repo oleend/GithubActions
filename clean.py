@@ -12,7 +12,7 @@ class GitOperation:
     def __init__(self,repo_url,token):
         self.repo_url = repo_url
         self.repo_dir = repo_url.split("/")[-1].split(".")[0]
-        self.repo = self.clone()
+        self.repo = self.repo_clone()
         self.token = token
     #List Branches, need to refer to self repo as it is part of the constructure of class object
     def listBranch(self):
@@ -80,7 +80,7 @@ class GitOperation:
             print(file.read())
             print('*'*50)
 
-    def clone(self):
+    def repo_clone(self):
         if not os.path.exists(self.repo_dir):
             print('Cloning the Repository')
             try:
