@@ -4,7 +4,7 @@ This is Python code that perform various Git operations like: `listing branches'
 
 
 <ul>
- <li> This code uses GitPython library to interact with Git repository and requests library to interact with GitHub API.</li>
+
 
 <li>It also uses Python's argparse module to parse command-line arguments and store them as instance variables.</li>
 
