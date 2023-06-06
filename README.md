@@ -43,6 +43,3 @@ This is Python code that perform various Git operations like: `listing branches'
 ## Running
 py clean.py  https://github.com/oleend/GithubActions.git --token "token-code" --option "Which Function to run"
 
-test
-test
-test
